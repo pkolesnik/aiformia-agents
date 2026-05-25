@@ -1,3 +1,13 @@
+---
+id: weekly-digest
+name: Weekly AI Digest Agent
+agentType: automation
+status: active
+deploymentStatus: live
+skills:
+  - data-summarization
+---
+
 # Weekly AI Digest Agent
 
 Synthesizes organizational AI transformation data into an executive narrative digest, delivered every Monday.
@@ -14,33 +24,12 @@ Synthesizes organizational AI transformation data into an executive narrative di
 Plain text, five sections, flowing narrative paragraphs, under 300 words:
 
 ```
-MOMENTUM: What moved forward this period. New live ideas, team stage advances, new automation adoptions.
-
-PIPELINE: State of the ideas pipeline — wave breakdown, in-flight ideas, upcoming approvals needed.
-
-PEOPLE: Training coverage, recent completions, any teams with coverage gaps.
-
-AUTOMATIONS: Live automation count, team adoption count, any newly adopted automations.
-
-NEEDS ATTENTION: Lowest-stage teams, stalled ideas, governance gaps. Be specific — name the team or item.
+MOMENTUM: What moved forward this period.
+PIPELINE: State of the ideas pipeline.
+PEOPLE: Training coverage and gaps.
+AUTOMATIONS: Live count and team adoption.
+NEEDS ATTENTION: Lowest-stage teams and stalled items.
 ```
-
-## Data Sources
-
-All data is fetched via the Aiformia internal API before the single-turn call:
-
-| Source | Data |
-|---|---|
-| AI Workflows | Total count, average maturity level |
-| Ideas Pipeline | Wave 1 count, in-flight count, live count |
-| Team Readiness | Total teams, average stage, lowest-stage team name |
-| Training | Total completions, required course count |
-| Automations | Total, live count, active team adoption count |
-
-## Delivery
-
-Email via Resend SDK to the `digestEmail` address configured in workspace settings.
-Content is also stored in the `ai_digests` table for dashboard preview.
 
 ## Tone Guidelines
 

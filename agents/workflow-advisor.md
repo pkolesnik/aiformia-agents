@@ -1,3 +1,14 @@
+---
+id: workflow-advisor
+name: Workflow Advisor Agent
+agentType: automation
+status: active
+deploymentStatus: live
+skills:
+  - web-search
+  - data-summarization
+---
+
 # Workflow Advisor Agent
 
 An agentic AI advisor that analyzes team readiness and recommends the highest-leverage AI automation opportunities.
